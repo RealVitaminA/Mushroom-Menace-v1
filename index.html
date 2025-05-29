@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mushroom Menace</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="game-ui">
+            <div id="score-container">
+                <div>SCORE: <span id="current-score">0</span></div>
+                <div>HIGH: <span id="high-score">0</span></div>
+            </div>
+            <div id="lives-container">LIVES: <span id="lives">3</span></div>
+            <div id="level-container">LEVEL: <span id="level">1</span></div>
+        </div>
+        <div id="start-screen" class="screen">
+            <h1>MUSHROOM MENACE</h1>
+            <p>Arrow keys or A/D to move, SPACE to shoot</p>
+            <p>Mouse movement and left-click also supported</p>
+            <button id="start-button">START GAME</button>
+            <button id="high-scores-button">HIGH SCORES</button>
+        </div>
+        <div id="game-over-screen" class="screen hidden">
+            <h2>GAME OVER</h2>
+            <p>FINAL SCORE: <span id="final-score">0</span></p>
+            <div id="new-high-score" class="hidden">
+                <h3>NEW HIGH SCORE!</h3>
+                <input type="text" id="player-name" maxlength="10" placeholder="Enter your name">
+                <button id="save-score-button">SAVE</button>
+            </div>
+            <button id="restart-button">PLAY AGAIN</button>
+            <button id="menu-button">MAIN MENU</button>
+        </div>
+        <div id="high-scores-screen" class="screen hidden">
+            <h2>HIGH SCORES</h2>
+            <div id="scores-list"></div>
+            <button id="back-button">BACK</button>
+        </div>
+    </div>
+
+    <!-- Load scripts -->
+    <script src="js/audio.js"></script>
+    <script src="js/highscore.js"></script>
+    <script src="js/collision.js"></script>
+    <script src="js/input.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/entities/mushroom.js"></script>
+    <script src="js/entities/projectile.js"></script>
+    <script src="js/entities/player.js"></script>
+    <script src="js/entities/inchworm.js"></script>
+    <script src="js/entities/flea.js"></script>
+    <script src="js/entities/spider.js"></script>
+    <script src="js/entities/scorpion.js"></script>
+    <script src="js/ui/hud.js"></script>
+    <script src="js/ui/screens.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
